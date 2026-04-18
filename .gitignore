@@ -1,0 +1,24 @@
+.DS_Store
+Thumbs.db
+
+# logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# dependencies
+node_modules/
+
+# Next.js build output
+.next/
+out/
+
+# env files (secrets)
+.env
+.env.*.local
+
+# local tooling
+.vscode/
+.idea/
+

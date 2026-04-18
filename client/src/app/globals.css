@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #0c0c0f;
+  --foreground: #ececee;
+  --netflix-red: #e50914;
+  --surface: rgba(255, 255, 255, 0.04);
+  --surface-hover: rgba(255, 255, 255, 0.08);
+}
+
+body {
+  color: var(--foreground);
+  background-color: var(--background);
+  background-image:
+    radial-gradient(ellipse 120% 80% at 50% -40%, rgba(229, 9, 20, 0.12), transparent 55%),
+    radial-gradient(ellipse 80% 50% at 100% 50%, rgba(120, 60, 200, 0.06), transparent 45%),
+    radial-gradient(ellipse 60% 40% at 0% 80%, rgba(30, 80, 140, 0.08), transparent 40%);
+  background-attachment: fixed;
+  font-family: var(--font-inter), system-ui, sans-serif;
+}
+
+@layer utilities {
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+  .row-hover {
+    @apply transition-all duration-300 ease-out hover:z-20 hover:-translate-y-1 hover:shadow-[0_16px_40px_-12px_rgba(0,0,0,0.85)] hover:ring-1 hover:ring-white/15;
+  }
+  .glass-nav {
+    @apply border-b border-white/[0.06] bg-black/55 backdrop-blur-xl backdrop-saturate-150;
+  }
+  .card-tile {
+    @apply overflow-hidden rounded-xl bg-zinc-900/80 ring-1 ring-white/[0.06] shadow-lg transition-shadow duration-300 hover:shadow-2xl;
+  }
+}
+
+.skeleton {
+  @apply animate-pulse rounded-lg bg-zinc-800/80;
+}
